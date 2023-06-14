@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chat_app/constants/theme.dart';
 import 'package:flutter_chat_app/widgets/input.dart';
 
+import '../../widgets/button.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -42,29 +44,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              SizedBox(
-                width: double.infinity,
-                height: 52.0,
-                child: ElevatedButton(
-                  onPressed: () => print("press"),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.primary1,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    elevation: 4,
-                    shadowColor: Colors.black.withOpacity(0.4),
-                  ),
-                  child: const Text(
-                    "Login",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              )
+              Button(
+                title: "Login",
+                onPressed: () => print("okela"),
+              ),
             ],
           ),
         ),
