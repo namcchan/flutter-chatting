@@ -1,7 +1,8 @@
 class Routes {
-  static const String App = '/';
+  static const String app = '/';
   static const String login = '/login';
   static const String signup = '/signup';
+  static const String forgotPassword = '/forgotPassword';
   static const String chats = '/chats';
   static const String chat = '/chat';
   static const String chatInfo = '/chat_info';

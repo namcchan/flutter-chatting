@@ -3,6 +3,7 @@ import 'package:flutter_chat_app/constants/theme.dart';
 import 'package:flutter_chat_app/widgets/image_button.dart';
 import 'package:flutter_chat_app/widgets/input.dart';
 
+import '../../constants/routes.dart';
 import '../../widgets/button.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -173,6 +174,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const Text("Already have an account?"),
                   const SizedBox(width: 4),
                   InkWell(
+                    onTap: () => Navigator.pushNamed(context, Routes.login),
                     child: Text(
                       "Login",
                       style: Theme.of(context)

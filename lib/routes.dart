@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_app/screens/authentication/forgot_password_screen.dart';
 import 'package:flutter_chat_app/screens/authentication/signup_screen.dart';
 import 'screens/authentication/login_screen.dart';
 import 'screens/chat/chat_detail_screen.dart';
@@ -10,9 +11,9 @@ class AppRoutes {
     final args = settings.arguments;
 
     switch (settings.name) {
-      case Routes.App:
+      case Routes.app:
         return MaterialPageRoute(
-          settings: const RouteSettings(name: Routes.App),
+          settings: const RouteSettings(name: Routes.app),
           builder: (context) {
             return const AppScreen();
           },
@@ -29,6 +30,13 @@ class AppRoutes {
           settings: const RouteSettings(name: Routes.signup),
           builder: (context) {
             return const SignUpScreen();
+          },
+        );
+      case Routes.forgotPassword:
+        return MaterialPageRoute(
+          settings: const RouteSettings(name: Routes.forgotPassword),
+          builder: (context) {
+            return const ForgotPasswordScreen();
           },
         );
       case Routes.chatInfo:

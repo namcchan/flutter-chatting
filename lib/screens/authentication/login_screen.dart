@@ -3,6 +3,7 @@ import 'package:flutter_chat_app/constants/theme.dart';
 import 'package:flutter_chat_app/widgets/image_button.dart';
 import 'package:flutter_chat_app/widgets/input.dart';
 
+import '../../constants/routes.dart';
 import '../../widgets/button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -64,14 +65,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       children: [
                         InkWell(
+                          onTap: () => Navigator.pushNamed(
+                            context,
+                            Routes.forgotPassword,
+                          ),
                           child: Text(
                             'Forgot password?',
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium
                                 ?.copyWith(
-                                    color: AppTheme.primary1,
-                                    fontWeight: FontWeight.w600),
+                                  color: AppTheme.primary1,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                         ),
                       ],
@@ -111,6 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const Text("Don't have an account?"),
                   const SizedBox(width: 4),
                   InkWell(
+                    onTap: () => Navigator.pushNamed(context, Routes.signup),
                     child: Text(
                       "Sign Up",
                       style: Theme.of(context)
