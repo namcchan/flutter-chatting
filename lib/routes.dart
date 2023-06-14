@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_app/screens/authentication/signup_screen.dart';
 import 'screens/authentication/login_screen.dart';
 import 'screens/chat/chat_detail_screen.dart';
 import 'screens/app_screen.dart';
@@ -21,6 +22,13 @@ class AppRoutes {
           settings: const RouteSettings(name: Routes.login),
           builder: (context) {
             return const LoginScreen();
+          },
+        );
+      case Routes.signup:
+        return MaterialPageRoute(
+          settings: const RouteSettings(name: Routes.signup),
+          builder: (context) {
+            return const SignUpScreen();
           },
         );
       case Routes.chatInfo:

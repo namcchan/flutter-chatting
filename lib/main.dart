@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       onGenerateInitialRoutes: (initialRoute) {
         return [
           AppRoutes.generateRoute(const RouteSettings(
-            name: Routes.login,
+            name: Routes.signup,
           ))!,
         ];
       },
